@@ -1,0 +1,21 @@
+.bg-color-red{
+	background-color: #c70c0c;
+}
+.p-top-20{
+	padding-top: 20px;
+}
+.height-300{
+	height: 300px;
+}
+.principal-msg{
+	margin-left: 15px;
+    margin-top: 15px;
+    height: 125px;
+    width: 50%;
+}
+.chairman-msg{
+	margin-left: 15px;
+    margin-top: 15px;
+    height: 125px;
+    width: 50%;
+}

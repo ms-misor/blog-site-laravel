@@ -16,6 +16,9 @@ class HomeController extends Controller
     	}else{
     		$posts=Post::orderBy('id','desc')->paginate(2);
     	}
+
+        // dd($posts);
+        
         return view('home',['posts'=>$posts]);
     }
     // Post Detail

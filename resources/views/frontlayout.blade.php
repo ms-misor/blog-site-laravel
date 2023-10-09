@@ -6,12 +6,45 @@
     <title>@yield('title')</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('lib')}}/bs4/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css')}}/custom.css" />
     <!-- Jquery -->
     <script type="text/javascript" src="{{asset('lib')}}/jquery-3.5.1.min.js"></script>
     <!-- BS4 Js -->
     <script type="text/javascript" src="{{asset('lib')}}/bs4/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
+	<nav class="navbar-expand-lg navbar-dark bg-danger">
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-md-6">
+					<span>Date: Friday, October 9, 2023 Ph: 883080222</span>
+				</div>
+				<div class="col-md-6 text-right">
+					<span>Mujib Coner, Sof, Coreer, Login : Student Protal For Payment</span>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<nav class="navbar-expand-lg navbar-dark bg-color-red">
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-md-3 p-top-20">
+					<span>ESTD : 1954 ;</span>
+				</div>
+				<div class="col-md-6 text-center">
+					<span>Rahmatullah Model Hogh School &amp; College</span><br>
+					<span>92, Lal Bag , Dhaka- 1211</span><br>
+					<span>School Code: 00000; College Code: 00000;</span>
+				</div>
+				<div class="col-md-3 text-right p-top-20">
+					<span>EIIN : 0000000</span>
+				</div>
+			</div>
+		</div>
+	</nav>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     	<div class="container">
 		  <a class="navbar-brand" href="{{url('/')}}">MSM Lab</a>
