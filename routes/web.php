@@ -53,4 +53,4 @@ Route::post('/admin/setting',[SettingController::class,'save_settings']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
