@@ -1,5 +1,8 @@
-.bg-color-red{
-	background-color: #c70c0c;
+.bg-color-top{
+	background-color: #ca5c37;
+}
+.bg-color-top-head{
+	background-color: #962a06;
 }
 .p-top-20{
 	padding-top: 20px;
@@ -9,13 +12,35 @@
 }
 .principal-msg{
 	margin-left: 15px;
-    margin-top: 15px;
-    height: 125px;
-    width: 50%;
+	margin-right: 10px;
+    /*margin-top: 15px;*/
+    height: 300px;
+    width: 100%;
+    border: none !important;
 }
 .chairman-msg{
-	margin-left: 15px;
-    margin-top: 15px;
-    height: 125px;
-    width: 50%;
+	margin-right: 15px;
+	margin-left: 10px;
+    /*margin-top: 15px;*/
+    height: 300px;
+    width: 100%;
+    border: none !important;
+}
+.principal-msg img, .chairman-msg img{
+	text-align: center;
+}
+.principal-msg p, .chairman-msg p{
+	text-align: justify
+}
+.about_us .card-body p{
+	text-align: justify;
+}
+.about_us .card h5{
+	padding-top: 5px;
+}
+.footer_background {
+    background-color: #962a06 !important;
+}
+.footer{
+	color: white !important;
 }

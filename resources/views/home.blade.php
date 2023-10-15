@@ -2,20 +2,23 @@
 @section('title','Home Page')
 @section('content')
 		<div class="row mb-5">
-			<div class="col-md-3 border border-dark height-300">
+			<div class="col-md-3 height-300">
 				<div class="row"> 
-					<div class="card principal-msg">
-						<p class="w-50 h-100">aaaaaaaaaaaa</p>
+					<div class="card principal-msg" width="200">
+						<div class="text-center">
+							<img class="rounded" src="https://dummyimage.com/1200x400/000/fff" width="50%" height="100">
+						</div>
+						<p class="h-100">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 border border-dark height-300">
+			<div class="col-md-6 border height-300">
 
 				<!-- bbbbbbbbbbbbbb -->
 
 				<div class="row"> 
 
-					<div class="container">
+					<div class="slider_containter">
 
 						<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 						  <div class="carousel-inner">
@@ -45,17 +48,63 @@
 
 
 			</div>
-			<div class="col-md-3 border border-dark height-300">
+			<div class="col-md-3 height-300">
 				<div class="row">
-					<div class="card chairman-msg">
-						<p class="w-50 h-100">vvvvvvvvvvvvvv</p>
+					<div class="card chairman-msg" width="200">
+						<div class="text-center">
+							<img class="rounded" src="https://dummyimage.com/1200x400/000/fff" width="50%" height="100">
+						</div>
+						<p class="h-100">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content</p>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
 		<div class="row">
+
 			<div class="col-md-8">
-				<div class="row mb-5"> 
+
+				<!-- About us Section -->
+				<div class="row about_us">
+					<div class="col-md-12 mb-5"> 
+						<div class="card text-center">
+						  <h4>About Us</h4>
+						  <h5>Welcome to RMHSC</h5>
+						  <div class="card-body">
+						    <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content</p>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<!-- End About us section -->
+
+				<!-- Necessary Links Section -->
+				<div class="row about_us">
+					<div class="col-md-6 mb-5"> 
+						<!-- Online Fee Payment -->
+						<div class="card mb-4">
+							<h5 class="card-header">Online Fee Payment</h5>
+							<div class="list-group list-group-flush">
+								<a href="#" class="list-group-item">Bkash</a>
+								<a href="#" class="list-group-item">Rocket</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-5"> 
+						<!-- Online Exam Info -->
+						<div class="card mb-4">
+							<h5 class="card-header">Online Result</h5>
+							<div class="list-group list-group-flush">
+								<a href="#" class="list-group-item">Result Link 1</a>
+								<a href="#" class="list-group-item">Result Link 2</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Necessary Links -->
+
+				<!-- <div class="row mb-5"> 
 					@if(count($posts)>0)
 						@foreach($posts as $post)
 						<div class="col-md-4">
@@ -70,14 +119,14 @@
 					@else
 					<p class="alert alert-danger">No Post Found</p>
 					@endif
-				</div>
+				</div> -->
 				<!-- Pagination -->
-				{{$posts->links()}}
+				<!-- {{$posts->links()}} -->
 			</div>
 			<!-- Right SIdebar -->
 			<div class="col-md-4">
 				<!-- Search -->
-				<div class="card mb-4">
+				<!-- <div class="card mb-4">
 					<h5 class="card-header">Search</h5>
 					<div class="card-body">
 						<form action="{{url('/')}}">
@@ -89,10 +138,10 @@
 							</div>
 						</form>
 					</div>
-				</div>
+				</div> -->
 				<!-- Recent Posts -->
 				<div class="card mb-4">
-					<h5 class="card-header">Recent Posts</h5>
+					<h5 class="card-header">Notice</h5>
 					<div class="list-group list-group-flush">
 						@if($recent_posts)
 							@foreach($recent_posts as $post)
@@ -101,12 +150,20 @@
 						@endif
 					</div>
 				</div>
-				<!-- Popular Posts -->
+				<!-- Popular Events -->
 				<div class="card mb-4">
-					<h5 class="card-header">Popular Posts</h5>
+					<h5 class="card-header">Events</h5>
 					<div class="list-group list-group-flush">
-						<a href="#" class="list-group-item">Post 1</a>
-						<a href="#" class="list-group-item">Post 2</a>
+						<a href="#" class="list-group-item">Event 1</a>
+						<a href="#" class="list-group-item">Event 2</a>
+					</div>
+				</div>
+				<!-- Online Exam Info -->
+				<div class="card mb-4">
+					<h5 class="card-header">Online Exam Info</h5>
+					<div class="list-group list-group-flush">
+						<a href="#" class="list-group-item">Online Exam Info 1</a>
+						<a href="#" class="list-group-item">Online Exam Info 2</a>
 					</div>
 				</div>
 			</div>
