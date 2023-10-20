@@ -59,13 +59,61 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="{{url('all-categories')}}">Categories</a>
 		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Dropdown
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Action</a>
+		          <a class="dropdown-item" href="#">Another action</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="#">Something else here</a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Dropdown link
+		        </a>
+		        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <li><a class="dropdown-item" href="#">Action</a></li>
+		          <li><a class="dropdown-item" href="#">Another action</a></li>
+		          <li class="dropdown-submenu">
+		            <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+		            <ul class="dropdown-menu">
+		              <li><a class="dropdown-item" href="#">Submenu action</a></li>
+		              <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+
+
+		              <li class="dropdown-submenu">
+		                <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+		                <ul class="dropdown-menu">
+		                  <li><a class="dropdown-item" href="#">Subsubmenu action1</a></li>
+		                  <li><a class="dropdown-item" href="#">Another subsubmenu action1</a></li>
+		                </ul>
+		              </li>
+		              <li class="dropdown-submenu">
+		                <a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+		                <ul class="dropdown-menu">
+		                  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+		                  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+		                </ul>
+		              </li>
+
+
+
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+
 		      @guest
 		      <li class="nav-item">
 		        <a class="nav-link" href="{{url('login')}}">Login</a>
 		      </li>
-		      <li class="nav-item">
+		      <!-- <li class="nav-item">
 		        <a class="nav-link" href="{{url('register')}}">Register</a>
-		      </li>
+		      </li> -->
 		      @else
 		      <li class="nav-item">
 		        <a class="nav-link" href="{{url('save-post-form')}}">Add Post</a>
@@ -156,6 +204,49 @@
 	  <!-- Copyright -->
 	</footer>
 	<!-- Footer -->
+
+	<style type="text/css">
+		
+		/*Css for multilevel navbae menu*/
+		.dropdown-submenu {
+		  position: relative;
+		}
+
+		.dropdown-submenu a::after {
+		  transform: rotate(-90deg);
+		  position: absolute;
+		  right: 6px;
+		  top: .8em;
+		}
+
+		.dropdown-submenu .dropdown-menu {
+		  top: 0;
+		  left: 100%;
+		  margin-left: .1rem;
+		  margin-right: .1rem;
+		}
+
+	</style>
+
+	 <!-- Script for multilevel navbae menu -->
+    <script type="text/javascript">
+      
+      $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+        if (!$(this).next().hasClass('show')) {
+          $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+        }
+        var $subMenu = $(this).next('.dropdown-menu');
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+          $('.dropdown-submenu .show').removeClass('show');
+        });
+
+
+        return false;
+      });
+    </script>
 
 </body>
 </html>
