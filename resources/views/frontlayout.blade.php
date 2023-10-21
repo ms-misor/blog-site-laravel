@@ -56,22 +56,134 @@
 		      <li class="nav-item active">
 		        <a class="nav-link" href="{{url('/')}}">Home</a>
 		      </li>
-		      <li class="nav-item">
+		      <!-- <li class="nav-item">
 		        <a class="nav-link" href="{{url('all-categories')}}">Categories</a>
-		      </li>
+		      </li> -->
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Dropdown
+		          About Us
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Action</a>
-		          <a class="dropdown-item" href="#">Another action</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a>
+		          <a class="dropdown-item" href="#">At a Glance</a>
+		          <a class="dropdown-item" href="#">History</a>
+		          <a class="dropdown-item" href="#">Why Study In rmhsc/shksc</a>
+		          <a class="dropdown-item" href="#">Vision & Mission</a>
+		          <a class="dropdown-item" href="#">Chairman Message</a>
+		          <a class="dropdown-item" href="#">Head Master/ Principal  Message</a>
+		          <a class="dropdown-item" href="#">Governing body</a>
+		          <a class="dropdown-item" href="#">Organogram</a>
+		          <a class="dropdown-item" href="#">Our Location</a>
+		          <a class="dropdown-item" href="#">Future Plan</a>
+		          <a class="dropdown-item" href="#">The Beautiful Campus</a>
+		          <a class="dropdown-item" href="#">Infrastructure</a>
 		        </div>
 		      </li>
 
 		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Academic
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Others Publication</a>
+		          <a class="dropdown-item" href="#">Curriculum</a>
+		          <a class="dropdown-item" href="#">Academic Calendar</a>
+		          <a class="dropdown-item" href="#">Scholarship</a>
+		          <a class="dropdown-item" href="#">Public Exam Result</a>
+		          <a class="dropdown-item" href="#">Digital Contents</a>
+		          <a class="dropdown-item" href="#">List Of Holidays</a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Admission
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Admission Notice</a>
+		          <a class="dropdown-item" href="#">Guidelines</a>
+		          <a class="dropdown-item" href="#">Admission Form</a>
+		          <a class="dropdown-item" href="#">Admission Result</a>
+		          <a class="dropdown-item" href="#">Apply Now</a>
+		          <a class="dropdown-item" href="#">Admission Contents</a>
+		          <a class="dropdown-item" href="#">Fast Facts</a>
+		          <a class="dropdown-item" href="#">Fee & Payment</a>
+		          <a class="dropdown-item" href="#">Scholarships</a>
+		          <a class="dropdown-item" href="#">Transfer Procedures</a>
+		          <a class="dropdown-item" href="#">Study at BMSC/SHKSC</a>
+		          <a class="dropdown-item" href="#">Admission Circula</a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Rules Regulation
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Instruction for Parents</a>
+		          <a class="dropdown-item" href="#">Instruction for Students</a>
+		          <a class="dropdown-item" href="#">Free & Expenditure</a>
+		          <a class="dropdown-item" href="#">Free Payment Procedure</a>
+		          <a class="dropdown-item" href="#">Uniform</a>
+		          <a class="dropdown-item" href="#">Result</a>
+		          <a class="dropdown-item" href="#">House</a>
+		          <a class="dropdown-item" href="#">Discipline </a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Information
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Notice Board</a>
+		          <a class="dropdown-item" href="#">Payment Procedure</a>
+		          <a class="dropdown-item" href="#">Facilities</a>
+		          <a class="dropdown-item" href="#">News & Events</a>
+		          <a class="dropdown-item" href="#">Our Achievements</a>
+		          <a class="dropdown-item" href="#">Policies & Guidelines</a>
+		          <a class="dropdown-item" href="#">Library</a>
+		          <a class="dropdown-item" href="#">Health & Environmental info </a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Events
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Annual Cultural</a>
+		          <a class="dropdown-item" href="#">Annual Sports</a>
+		          <a class="dropdown-item" href="#">Inter Competition</a>
+		          <a class="dropdown-item" href="#">Study Tour</a>
+		          <a class="dropdown-item" href="#">Annual Picnic</a>
+		          <a class="dropdown-item" href="#">Nobin Boron</a>
+		          <a class="dropdown-item" href="#">Farewell</a>
+		          <a class="dropdown-item" href="#">Parents Day</a>
+		          <a class="dropdown-item" href="#">Special Day Celebration</a>
+		          <a class="dropdown-item" href="#">College Magazine</a>
+		          <a class="dropdown-item" href="#">Academic Activities</a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Co- Curriculum
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Arts & Cultural Club</a>
+		          <a class="dropdown-item" href="#">BNCC</a>
+		          <a class="dropdown-item" href="#">Business Club</a>
+		          <a class="dropdown-item" href="#">Cultural</a>
+		          <a class="dropdown-item" href="#">Debate Club</a>
+		          <a class="dropdown-item" href="#">Girls Guide</a>
+		          <a class="dropdown-item" href="#">Green Thumb</a>
+		          <a class="dropdown-item" href="#">ICT Club</a>
+		          <a class="dropdown-item" href="#">Language Club</a>
+		          <a class="dropdown-item" href="#">Mathematics Club</a>
+		        </div>
+		      </li>
+
+		      <!-- li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          Dropdown link
 		        </a>
@@ -105,7 +217,7 @@
 		            </ul>
 		          </li>
 		        </ul>
-		      </li>
+		      </li> -->
 
 		      @guest
 		      <li class="nav-item">
@@ -178,7 +290,7 @@
 	        <h5 class="text-uppercase">Links</h5>
 	        <ul class="list-unstyled">
 	          <li>
-	            <a href="#!">Link 1</a>
+	            <a href="{{url('all-categories')}}">Categories</a>
 	          </li>
 	          <li>
 	            <a href="#!">Link 2</a>
