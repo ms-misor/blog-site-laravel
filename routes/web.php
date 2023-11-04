@@ -7,6 +7,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SettingController;
+
+use App\Http\Controllers\AboutusController;
+use App\Http\Controllers\InformationsController;
+use App\Http\Controllers\EventsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,6 +54,19 @@ Route::resource('admin/post',PostController::class);
 // Settings
 Route::get('/admin/setting',[SettingController::class,'index']);
 Route::post('/admin/setting',[SettingController::class,'save_settings']);
+
+// CMS
+Route::get('admin/about_us',[AboutusController::class,'aboutUsPages']);
+Route::get('admin/about/{id}/delete',[AboutusController::class,'destroy']);
+Route::resource('admin/about',AboutusController::class);
+
+Route::get('admin/information_pages',[InformationsController::class,'informationPages']);
+Route::get('admin/information/{id}/delete',[InformationsController::class,'destroy']);
+Route::resource('admin/information',InformationsController::class);
+
+Route::get('admin/event_pages',[EventsController::class,'eventPages']);
+Route::get('admin/event/{id}/delete',[EventsController::class,'destroy']);
+Route::resource('admin/event',EventsController::class);
 
 Auth::routes();
 

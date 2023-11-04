@@ -59,6 +59,18 @@
             <a class="dropdown-item" href="{{url('admin/category/create')}}">Add New</a>
           </div>
         </li>
+        <!-- CMS-Content management system -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-address-card"></i>
+            <span>CMS</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{url('admin/about_us')}}">About Us</a>
+            <a class="dropdown-item" href="{{url('admin/information_pages')}}">Information</a>
+            <a class="dropdown-item" href="{{url('admin/event_pages')}}">Events</a>
+          </div>
+        </li>
         <!-- Post -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
