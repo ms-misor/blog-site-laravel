@@ -6,7 +6,7 @@
     <title>@yield('title')</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('lib')}}/bs4/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="{{asset('css')}}/custom.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css')}}/custom.css?v={{ date('d') }}" />
     <!-- Jquery -->
     <script type="text/javascript" src="{{asset('lib')}}/jquery-3.5.1.min.js"></script>
     <!-- BS4 Js -->
@@ -15,10 +15,11 @@
 </head>
 <body>
 	<nav class="navbar-expand-lg navbar-dark bg-color-top">
-		<div class="container text-white">
+		<!-- <div class="container text-white"> -->
+		<div class="text-white ml-4 mr-4">
 			<div class="row">
 				<div class="col-md-6">
-					<span>Date: Friday, October 9, 2023 Ph: 883080222</span>
+					<span>Date: Friday, October 9, 2023 Ph: 883080222,  Mail: ..........</span>
 				</div>
 				<div class="col-md-6 text-right">
 					<span>Mujib Coner, Sof, Coreer, Login : Student Protal For Payment</span>
@@ -29,25 +30,42 @@
 
 	<nav class="navbar-expand-lg navbar-dark bg-color-top-head">
 		<div class="container text-white">
+		<!-- <div class="text-white ml-4 mr-4"> -->
 			<div class="row">
-				<div class="col-md-3 p-top-20">
+				<div class="col-md-2 header-logo">
+					<span class="img-span-logo"><img src="{{asset('imgs/dummy')}}/logo.png"></span><br>
 					<span>ESTD : 1954 ;</span>
 				</div>
-				<div class="col-md-6 text-center">
+				<div class="col-md-8 text-center header-text">
+					<!-- <p style="float: left;padding-top: 20px;">ESTD : 1954 ;</p> -->
+
 					<span>Rahmatullah Model Hogh School &amp; College</span><br>
 					<span>92, Lal Bag , Dhaka- 1211</span><br>
 					<span>School Code: 00000; College Code: 00000;</span>
 				</div>
-				<div class="col-md-3 text-right p-top-20">
+				<div class="col-md-2 text-right header-logo">
+					<span class="img-span-logo"><img src="{{asset('imgs/dummy')}}/logo.png"></span><br>
 					<span>EIIN : 0000000</span>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    	<div class="container">
-		  <a class="navbar-brand" href="{{url('/')}}">MSM Lab</a>
+	<nav class="navbar-expand-lg navbar-dark bg-color-marque">
+		<!-- <div class="container text-white"> -->
+		<div class="text-white ml-4 mr-4">
+			<div class="row">
+				<div class="col-md-12 marquee-content">
+					<marquee class="marquee-self">This text is for notice scroll from right to left</marquee>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-main-nav">
+    	<!-- <div class="container"> -->
+    	<div class="">
+		  <!-- <a class="navbar-brand" href="{{url('/')}}">MSM Lab</a> -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -245,7 +263,8 @@
 		</div>
 	</nav>
 	<!-- Get latest posts -->
-	<main class="container mt-4">
+	<!-- <main class="container mt-4"> -->
+	<main class="m-4">
 		@yield('content')
 	</main>
 

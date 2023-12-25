@@ -88,6 +88,8 @@
 							<div class="list-group list-group-flush">
 								<a href="#" class="list-group-item">Bkash</a>
 								<a href="#" class="list-group-item">Rocket</a>
+								<a href="#" class="list-group-item">Nagad</a>
+								<a href="#" class="list-group-item">UCash</a>
 							</div>
 						</div>
 					</div>
@@ -98,6 +100,8 @@
 							<div class="list-group list-group-flush">
 								<a href="#" class="list-group-item">Result Link 1</a>
 								<a href="#" class="list-group-item">Result Link 2</a>
+								<a href="#" class="list-group-item">Result Link 3</a>
+								<a href="#" class="list-group-item">Result Link 4</a>
 							</div>
 						</div>
 					</div>
@@ -165,6 +169,69 @@
 						<a href="#" class="list-group-item">Online Exam Info 1</a>
 						<a href="#" class="list-group-item">Online Exam Info 2</a>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{asset('imgs/dummy')}}/400x250.png">
 				</div>
 			</div>
 		</div>
