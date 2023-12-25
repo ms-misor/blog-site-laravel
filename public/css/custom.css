@@ -1,8 +1,8 @@
 .bg-color-top{
-	background-color: #ca5c37;
+	background-color: #ff3300;
 }
 .bg-color-top-head{
-	background-color: #962a06;
+	background-color: #0c04ae;
 }
 .p-top-20{
 	padding-top: 20px;
@@ -39,9 +39,36 @@
 	padding-top: 5px;
 }
 .footer_background {
-    background-color: #962a06 !important;
+    background-color: #ed7d31 !important;
 }
 .footer{
 	color: white !important;
+}
+
+.bg-main-nav{
+	background-color: #ed7d31 !important;
+}
+
+.footer_background ul li a{
+	color: #0c04ae;
+}
+
+.img-span-logo img{
+	width: 125px !important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.header-text span{
+	font-size: 25px; 
+}
+.bg-color-marque{
+	background-color: #66ffff;
+}
+.bg-color-marque .marquee-content{
+	height: 35px;
+	color: #000;
+}
+.bg-color-marque .marquee-content .marquee-self{
+	padding-top: 5px;
 }
 
