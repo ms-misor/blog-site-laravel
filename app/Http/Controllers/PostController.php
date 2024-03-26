@@ -15,6 +15,9 @@ class PostController extends Controller
     public function index()
     {
         $data=Post::all();
+
+        // dd($data);
+        
         return view('backend.post.index',[
             'data'=>$data,
         ]);

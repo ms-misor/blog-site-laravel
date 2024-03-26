@@ -11,6 +11,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\InformationsController;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\CommonAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,6 +68,14 @@ Route::resource('admin/information',InformationsController::class);
 Route::get('admin/event_pages',[EventsController::class,'eventPages']);
 Route::get('admin/event/{id}/delete',[EventsController::class,'destroy']);
 Route::resource('admin/event',EventsController::class);
+
+// Website banners
+Route::get('admin/banners',[CommonAdminController::class,'index']);
+Route::get('admin/create-banner',[CommonAdminController::class,'create_banner']);
+Route::post('admin/banner-add-save',[CommonAdminController::class,'banner_add_save']);
+Route::get('admin/banner/{id}/edit',[CommonAdminController::class,'banner_edit']);
+Route::put('admin/banner-update-save/{id}',[CommonAdminController::class,'banner_update_save']);
+Route::get('admin/banner/{id}/delete',[CommonAdminController::class,'banner_delete']);
 
 Auth::routes();
 

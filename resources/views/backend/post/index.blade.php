@@ -14,8 +14,8 @@
   <!-- DataTables Example -->
   <div class="card mb-3">
     <div class="card-header">
-      <i class="fas fa-table"></i> Posts
-      <a href="{{url('admin/post/create')}}" class="float-right btn btn-sm btn-dark">Add Data</a>
+      <i class="fas fa-table"></i> Notice
+      <a href="{{url('admin/post/create')}}" class="float-right btn btn-sm btn-dark">Add Notice</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
