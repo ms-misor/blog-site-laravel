@@ -33,7 +33,7 @@
 
   <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-      <a class="navbar-brand mr-1" href="index.html">Laravel Blog</a>
+      <a class="navbar-brand mr-1" href="index.html">WebAdmin</a>
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
       </button>
@@ -75,11 +75,27 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-address-card"></i>
-            <span>Post</span>
+            <span>Notice</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="{{url('admin/post')}}">View All</a>
             <a class="dropdown-item" href="{{url('admin/post/create')}}">Add New</a>
+          </div>
+        </li>
+        <!-- Post -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-globe"></i>
+            <span>Website</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{url('admin/banners')}}">Banners</a>
+            <a class="dropdown-item" href="{{url('admin/banner-contents')}}">Banner Contents</a>
+            <a class="dropdown-item" href="{{url('admin/about-us')}}">About Us</a>
+            <a class="dropdown-item" href="{{url('admin/online-fee-payment')}}">Online Fee Payment</a>
+            <a class="dropdown-item" href="{{url('admin/online-result')}}">Online Result</a>
+            <a class="dropdown-item" href="{{url('admin/online-exam-info')}}">Online Exam Info</a>
+            <a class="dropdown-item" href="{{url('admin/home-page-archives')}}">Archives</a>
           </div>
         </li>
         <!-- Comments -->
