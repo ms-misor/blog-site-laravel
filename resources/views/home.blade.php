@@ -5,10 +5,40 @@
 			<div class="col-md-3 height-300">
 				<div class="row"> 
 					<div class="card principal-msg" width="200">
+
+						<?php 
+						$left_banner_contents = null;
+						$right_banner_contents = null;
+						foreach ($banners_contents as $key => $banners_content) {
+							if($banners_content->position == "left"){
+								$left_banner_contents = $banners_content;
+							}else{
+								$right_banner_contents = $banners_content;
+							}
+						}
+
+						?>
+
 						<div class="text-center">
-							<img class="rounded" src="https://dummyimage.com/1200x400/000/fff" width="50%" height="100">
+							<?php
+								if(isset($left_banner_contents->image)){ ?>
+									<img class="rounded" src="{{ asset('imgs/banner_contents').'/'.$left_banner_contents->image }}" width="50%" height="100">
+								<?php }else{ ?>
+									<img class="rounded" src="https://dummyimage.com/1200x400/000/fff" width="50%" height="100">
+								<?php }
+							?>
+							
 						</div>
-						<p class="h-100">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content</p>
+						<p class="h-100">
+							<?php
+							if(isset($left_banner_contents->contents)){
+								echo $left_banner_contents->contents;
+							}else{
+								echo "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content";
+							}
+							?>
+							
+						</p>
 					</div>
 				</div>
 			</div>
@@ -22,6 +52,19 @@
 
 						<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 						  <div class="carousel-inner">
+
+						  	<?php if(!empty($banners)){
+						  		$sl = 1;
+						  		foreach ($banners as $key => $banner) {
+						  		
+						  	 ?>
+						  	<div class="carousel-item <?php if($sl == 1){echo 'active';}?>" data-interval="10000">
+						      <img src="{{ asset('imgs/banner_image').'/'.$banner->image_path }}" class="d-block w-100 height-300" alt="...">
+						    </div>
+
+						    <?php $sl++; } 
+							}else{?>
+
 						    <div class="carousel-item active" data-interval="10000">
 						      <img src="https://dummyimage.com/1200x400/000/fff" class="d-block w-100 height-300" alt="...">
 						    </div>
@@ -31,6 +74,8 @@
 						    <div class="carousel-item" data-interval="10000">
 						      <img src="https://dummyimage.com/1200x400/000/fff" class="d-block w-100 height-300" alt="...">
 						    </div>
+						     <?php }?>
+
 						  </div>
 						  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
 						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,9 +97,24 @@
 				<div class="row">
 					<div class="card chairman-msg" width="200">
 						<div class="text-center">
-							<img class="rounded" src="https://dummyimage.com/1200x400/000/fff" width="50%" height="100">
+							
+							<?php
+								if(isset($right_banner_contents->image)){ ?>
+									<img class="rounded" src="{{ asset('imgs/banner_contents').'/'.$right_banner_contents->image }}" width="50%" height="100">
+								<?php }else{ ?>
+									<img class="rounded" src="https://dummyimage.com/1200x400/000/fff" width="50%" height="100">
+								<?php }
+							?>
 						</div>
-						<p class="h-100">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content</p>
+						<p class="h-100">
+							<?php
+							if(isset($right_banner_contents->contents)){
+								echo $right_banner_contents->contents;
+							}else{
+								echo "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content";
+							}
+							?>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -70,9 +130,9 @@
 					<div class="col-md-12 mb-5"> 
 						<div class="card text-center">
 						  <h4>About Us</h4>
-						  <h5>Welcome to RMHSC</h5>
+						  <h5><?php echo $about_us->title;?></h5>
 						  <div class="card-body">
-						    <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content meaningful content</p>
+						    <p><?php echo $about_us->contents;?></p>
 						  </div>
 						</div>
 					</div>
@@ -86,10 +146,9 @@
 						<div class="card mb-4">
 							<h5 class="card-header">Online Fee Payment</h5>
 							<div class="list-group list-group-flush">
-								<a href="#" class="list-group-item">Bkash</a>
-								<a href="#" class="list-group-item">Rocket</a>
-								<a href="#" class="list-group-item">Nagad</a>
-								<a href="#" class="list-group-item">UCash</a>
+								@foreach($online_fee_payments as $online_fee_payment)
+								<a target="_blank" href="{{$online_fee_payment->link}}" class="list-group-item">{{$online_fee_payment->title}}</a>
+								@endforeach
 							</div>
 						</div>
 					</div>
@@ -98,10 +157,9 @@
 						<div class="card mb-4">
 							<h5 class="card-header">Online Result</h5>
 							<div class="list-group list-group-flush">
-								<a href="#" class="list-group-item">Result Link 1</a>
-								<a href="#" class="list-group-item">Result Link 2</a>
-								<a href="#" class="list-group-item">Result Link 3</a>
-								<a href="#" class="list-group-item">Result Link 4</a>
+								@foreach($online_results as $online_result)
+								<a target="_blank" href="{{$online_result->link}}" class="list-group-item">{{$online_result->title}}</a>
+								@endforeach
 							</div>
 						</div>
 					</div>
@@ -158,23 +216,32 @@
 				<div class="card mb-4">
 					<h5 class="card-header">Events</h5>
 					<div class="list-group list-group-flush">
-						<a href="#" class="list-group-item">Event 1</a>
-						<a href="#" class="list-group-item">Event 2</a>
+						@foreach($all_events as $all_event)
+						<a target="_blank" href="{{$all_event->link}}" class="list-group-item">{{$all_event->title}}</a>
+						@endforeach
 					</div>
 				</div>
 				<!-- Online Exam Info -->
 				<div class="card mb-4">
 					<h5 class="card-header">Online Exam Info</h5>
 					<div class="list-group list-group-flush">
-						<a href="#" class="list-group-item">Online Exam Info 1</a>
-						<a href="#" class="list-group-item">Online Exam Info 2</a>
+						@foreach($online_exam as $online_exm)
+						<a target="_blank" href="{{$online_exm->link}}" class="list-group-item">{{$online_exm->title}}</a>
+						@endforeach
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
+			@foreach($home_page_arcive as $home_archive)
 			<div class="col-md-3">
+				<div class="card mb-4">
+					<img src="{{ asset('imgs/home_archive').'/'.$home_archive->image_path }}">
+				</div>
+			</div>
+			@endforeach
+			<!-- <div class="col-md-3">
 				<div class="card mb-4">
 					<img src="{{asset('imgs/dummy')}}/400x250.png">
 				</div>
@@ -233,6 +300,6 @@
 				<div class="card mb-4">
 					<img src="{{asset('imgs/dummy')}}/400x250.png">
 				</div>
-			</div>
+			</div> -->
 		</div>
 @endsection('content')

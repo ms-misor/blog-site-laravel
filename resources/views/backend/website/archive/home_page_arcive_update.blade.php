@@ -1,5 +1,7 @@
 
 @extends('layout')
+@section('meta_desc',$meta_desc)
+@section('title',$title)
 @section('content')
 <div class="container-fluid">
 
@@ -15,8 +17,8 @@
   <!-- DataTables Example -->
   <div class="card mb-3">
     <div class="card-header">
-      <i class="fas fa-table"></i> Update Banner
-      <a href="{{url('admin/banners')}}" class="float-right btn btn-sm btn-dark">All Data</a>
+      <i class="fas fa-table"></i> Update Home Page Archive
+      <a href="{{url('admin/home_page_archives')}}" class="float-right btn btn-sm btn-dark">All Data</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -35,22 +37,22 @@
         <p class="text-success">{{session('success')}}</p>
         @endif
 
-        <form method="post" action="{{url('admin/banner-update-save/'.$data->id)}}" enctype="multipart/form-data">
+        <form method="post" action="{{url('admin/home_page_archive_update_save/'.$data->id)}}" enctype="multipart/form-data">
           @csrf
           @method('put')
           <table class="table table-bordered">
               <tr>
-                  <th>Name</th>
-                  <td><input type="text" value="{{$data->name}}" name="name" class="form-control" /></td>
+                  <th>Title</th>
+                  <td><input type="text" value="{{$data->title}}" name="title" class="form-control" placeholder="Title" /></td>
               </tr>
               <tr>
                   <th>Image</th>
                   <td>
-                    <p class="my-2"><img width="80" src="{{asset('imgs/banner_image')}}/{{$data->image_path}}" /></p>
+                    <p class="my-2"><img width="80" src="{{asset('imgs/home_archive')}}/{{$data->image_path}}" /></p>
                     <input type="hidden" value="{{$data->image_path}}" name="old_image" />
                     <input type="file" name="image" />
                     <br>
-                    <span>Note: Image width 1200px and height 400px</span>
+                    <span>Note: Image width 480px and height 480px</span>
                   </td>
               </tr>
               <tr>

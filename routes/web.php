@@ -76,6 +76,62 @@ Route::post('admin/banner-add-save',[CommonAdminController::class,'banner_add_sa
 Route::get('admin/banner/{id}/edit',[CommonAdminController::class,'banner_edit']);
 Route::put('admin/banner-update-save/{id}',[CommonAdminController::class,'banner_update_save']);
 Route::get('admin/banner/{id}/delete',[CommonAdminController::class,'banner_delete']);
+// Website banners contents
+Route::get('admin/banner-contents',[CommonAdminController::class,'bannerc_ontents']);
+Route::get('admin/create-banner-content',[CommonAdminController::class,'create_banner_contents']);
+Route::post('admin/banner-content-add-save',[CommonAdminController::class,'banner_contents_add_save']);
+Route::get('admin/banner-content/{id}/edit',[CommonAdminController::class,'banner_contents_edit']);
+Route::put('admin/banner-content-update-save/{id}',[CommonAdminController::class,'banner_contents_update_save']);
+// Route::get('admin/banner-content/{id}/delete',[CommonAdminController::class,'banner_contents_delete']);
+// Website about us
+Route::get('admin/about_us',[CommonAdminController::class,'aboutUs']);
+Route::get('admin/create_about_us',[CommonAdminController::class,'createAboutUs']);
+Route::post('admin/create_about_us_save',[CommonAdminController::class,'aboutUsSave']);
+Route::get('admin/about_us/{id}/edit',[CommonAdminController::class,'aboutUsEdit']);
+Route::put('admin/about_us_update_save/{id}',[CommonAdminController::class,'aboutUsUpdateSave']);
+
+// Website online-fee-payment
+Route::get('admin/online_fee_payment',[CommonAdminController::class,'onlineFeePayment']);
+Route::get('admin/create_online_fee_payment',[CommonAdminController::class,'createonlineFeePayment']);
+Route::post('admin/create_online_fee_payment_save',[CommonAdminController::class,'onlineFeePaymentSave']);
+Route::get('admin/online_fee_payment/{id}/edit',[CommonAdminController::class,'onlineFeePaymentEdit']);
+Route::put('admin/online_fee_payment_update_save/{id}',[CommonAdminController::class,'onlineFeePaymentUpdateSave']);
+Route::get('admin/online_fee_payment/{id}/delete',[CommonAdminController::class,'onlineContentDelete']);
+
+// Website online-result
+Route::get('admin/online_result',[CommonAdminController::class,'onlineResult']);
+Route::get('admin/create_online_result',[CommonAdminController::class,'createonlineResult']);
+Route::post('admin/create_online_result_save',[CommonAdminController::class,'onlineResultSave']);
+Route::get('admin/online_result/{id}/edit',[CommonAdminController::class,'onlineResultEdit']);
+Route::put('admin/online_result_update_save/{id}',[CommonAdminController::class,'onlineResultUpdateSave']);
+Route::get('admin/online_result/{id}/delete',[CommonAdminController::class,'onlineContentDelete']);
+
+// Website online-exam info
+Route::get('admin/online_exam',[CommonAdminController::class,'onlineExam']);
+Route::get('admin/create_online_exam',[CommonAdminController::class,'createonlineExam']);
+Route::post('admin/create_online_exam_save',[CommonAdminController::class,'onlineExamSave']);
+Route::get('admin/online_exam/{id}/edit',[CommonAdminController::class,'onlineExamEdit']);
+Route::put('admin/online_exam_update_save/{id}',[CommonAdminController::class,'onlineExamUpdateSave']);
+Route::get('admin/online_exam/{id}/delete',[CommonAdminController::class,'onlineContentDelete']);
+
+// Website all_events
+Route::get('admin/all_events',[CommonAdminController::class,'allEvents']);
+Route::get('admin/create_event',[CommonAdminController::class,'createEvent']);
+Route::post('admin/create_event_save',[CommonAdminController::class,'createEventSave']);
+Route::get('admin/all_events/{id}/edit',[CommonAdminController::class,'eventEdit']);
+Route::put('admin/event_update_save/{id}',[CommonAdminController::class,'eventUpdateSave']);
+Route::get('admin/all_events/{id}/delete',[CommonAdminController::class,'eventDelete']);
+
+// Website archives images
+Route::get('admin/home_page_archives',[CommonAdminController::class,'homePageArchives']);
+Route::get('admin/create_home_page_archive',[CommonAdminController::class,'createHomePageArchives']);
+Route::post('admin/home_page_archive_save',[CommonAdminController::class,'homePageArchivesSave']);
+Route::get('admin/home_page_archives/{id}/edit',[CommonAdminController::class,'homePageArchivesEdit']);
+Route::put('admin/home_page_archive_update_save/{id}',[CommonAdminController::class,'homePageArchivesUpdateSave']);
+Route::get('admin/home_page_archives/{id}/delete',[CommonAdminController::class,'homePageArchivesDelete']);
+
+Route::get('admin/web_settings',[CommonAdminController::class,'webSettings']);
+Route::put('admin/web_settings_save',[CommonAdminController::class,'webSettingsSave']);
 
 Auth::routes();
 

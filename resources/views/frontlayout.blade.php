@@ -19,7 +19,7 @@
 		<div class="text-white ml-4 mr-4">
 			<div class="row">
 				<div class="col-md-6">
-					<span>Date: Friday, October 9, 2023 Ph: 883080222,  Mail: ..........</span>
+					<span>Date: Friday, October 9, 2023 Ph: <?php echo $website_settings->phone;?>,  Mail: <?php echo $website_settings->email;?></span>
 				</div>
 				<div class="col-md-6 text-right">
 					<span>Mujib Coner, Sof, Coreer, Login : Student Protal For Payment</span>
@@ -33,30 +33,37 @@
 		<!-- <div class="text-white ml-4 mr-4"> -->
 			<div class="row">
 				<div class="col-md-2 header-logo">
-					<span class="img-span-logo"><img src="{{asset('imgs/dummy')}}/logo.png?v={{ date('d') }}"></span><br>
+					<!-- <span class="img-span-logo"><img src="{{asset('imgs/dummy')}}/logo.png?v={{ date('d') }}"></span> -->
+					<span class="img-span-logo"><img src="{{asset('imgs/web_settings')}}/{{$website_settings->logo}}?v={{ date('d') }}"></span>
+					<br>
 					<span>ESTD : 1954 ;</span>
 				</div>
 				<div class="col-md-8 text-center header-text">
 					<!-- <p style="float: left;padding-top: 20px;">ESTD : 1954 ;</p> -->
 
-					<span>Rahmatullah Model Hogh School &amp; College</span><br>
-					<span>92, Lal Bag , Dhaka- 1211</span><br>
-					<span>School Code: 00000; College Code: 00000;</span>
+					<span>{{$website_settings->school_name}}</span><br>
+					<span>{{$website_settings->address}}</span><br>
+					<span>{{$website_settings->school_code}}</span>
 				</div>
 				<div class="col-md-2 text-right header-logo">
-					<span class="img-span-logo"><img src="{{asset('imgs/dummy')}}/logo.png?v={{ date('d') }}"></span><br>
+					<span class="img-span-logo"><img src="{{asset('imgs/web_settings')}}/{{$website_settings->logo}}?v={{ date('d') }}"></span><br>
 					<span>EIIN : 0000000</span>
 				</div>
 			</div>
 		</div>
 	</nav>
-
+	<?php 
+		$notice = "";
+		foreach ($recent_posts as $key => $value) {
+			$notice .= $value->title."                           ";
+		};
+	?>
 	<nav class="navbar-expand-lg navbar-dark bg-color-marque">
 		<!-- <div class="container text-white"> -->
 		<div class="text-white ml-4 mr-4">
 			<div class="row">
 				<div class="col-md-12 marquee-content">
-					<marquee class="marquee-self">This text is for notice scroll from right to left</marquee>
+					<marquee style="white-space: pre;" class="marquee-self">{{$notice}}</marquee>
 				</div>
 			</div>
 		</div>
