@@ -1,5 +1,7 @@
 
 @extends('layout')
+@section('meta_desc',$meta_desc)
+@section('title',$title)
 @section('content')
 <div class="container-fluid">
 
@@ -15,8 +17,8 @@
   <!-- DataTables Example -->
   <div class="card mb-3">
     <div class="card-header">
-      <i class="fas fa-table"></i> Update Banner
-      <a href="{{url('admin/banners')}}" class="float-right btn btn-sm btn-dark">All Data</a>
+      <i class="fas fa-table"></i> Event Update
+      <a href="{{url('admin/all_events')}}" class="float-right btn btn-sm btn-dark">All Data</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -35,24 +37,23 @@
         <p class="text-success">{{session('success')}}</p>
         @endif
 
-        <form method="post" action="{{url('admin/banner-update-save/'.$data->id)}}" enctype="multipart/form-data">
+        <form method="post" action="{{url('admin/event_update_save/'.$data->id)}}" enctype="multipart/form-data">
           @csrf
           @method('put')
           <table class="table table-bordered">
               <tr>
-                  <th>Name</th>
-                  <td><input type="text" value="{{$data->name}}" name="name" class="form-control" /></td>
-              </tr>
-              <tr>
-                  <th>Image</th>
+                  <th>Title</th>
                   <td>
-                    <p class="my-2"><img width="80" src="{{asset('imgs/banner_image')}}/{{$data->image_path}}" /></p>
-                    <input type="hidden" value="{{$data->image_path}}" name="old_image" />
-                    <input type="file" name="image" />
-                    <br>
-                    <span>Note: Image width 1200px and height 400px</span>
+                    <input type="text" name="title" placeholder="Title" value="{{$data->title}}" />
                   </td>
               </tr>
+              <tr>
+                  <th>Link</th>
+                  <td>
+                    <input type="text" name="link" placeholder="Link" value="{{$data->link}}" />
+                  </td>
+              </tr>
+
               <tr>
                   <td colspan="2">
                       <input type="submit" class="btn btn-primary" />

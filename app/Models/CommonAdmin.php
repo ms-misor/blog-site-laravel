@@ -24,6 +24,29 @@ class CommonAdmin extends Model
         return $data;
     }
 
+    public function getAllDataWhere($table_name, $where)
+    {
+        // Use the query builder to retrieve data from the specified table
+        $data = DB::table($table_name)
+                     ->where($where)
+                     ->orderBy('id', 'desc')
+                     ->get();
+
+        return $data;
+    }
+
+    public function getAllDataWhereLimit($table_name, $where, $limit)
+    {
+        // Use the query builder to retrieve data from the specified table
+        $data = DB::table($table_name)
+                     ->where($where)
+                     ->orderBy('id', 'desc')
+                     ->limit($limit)
+                     ->get();
+
+        return $data;
+    }    
+
     public function insertData($data, $table_name)
     {
         // Use the query builder to insert data into the specified table
@@ -63,6 +86,24 @@ class CommonAdmin extends Model
         $data = DB::table($table_name)
                      ->where('id',$id)
                      ->delete();
+
+        return $data;
+    }
+
+    public function getWebSetting($table_name)
+    {
+        // Use the query builder to retrieve data from the specified table
+        $data = DB::table($table_name)
+                     ->first();
+
+        return $data;
+    }
+
+    public function getFirstRowData($table_name)
+    {
+        // Use the query builder to retrieve data from the specified table
+        $data = DB::table($table_name)
+                     ->first();
 
         return $data;
     }

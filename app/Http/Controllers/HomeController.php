@@ -6,8 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Comment;
+use App\Models\CommonAdmin;
 class HomeController extends Controller
 {
+    protected $CommonAdminmodel;
+
+    public function __construct(){
+
+        $this->CommonAdminmodel = new CommonAdmin();
+
+    }
+
     function index(Request $request){
     	// $posts=Post::orderBy('id','desc')->simplePaginate(1);
     	if($request->has('q')){
@@ -17,9 +26,31 @@ class HomeController extends Controller
     		$posts=Post::orderBy('id','desc')->paginate(2);
     	}
 
-        // dd($posts);
+        $banners = $this->CommonAdminmodel->getAllData('banners');
+        $banners_contents = $this->CommonAdminmodel->getAllData('banners_contents');
+        $about_us = $this->CommonAdminmodel->getFirstRowData('about_us');
+        $online_fee_payments = $this->CommonAdminmodel->getAllDataWhereLimit('online_contents',['type' => 'fee'], 4);
+        $online_results = $this->CommonAdminmodel->getAllDataWhereLimit('online_contents',['type' => 'result'], 4);
+        $online_exam = $this->CommonAdminmodel->getAllDataWhereLimit('online_contents',['type' => 'exam'], 4);
+        $home_page_arcive = $this->CommonAdminmodel->getAllData('home_page_arcive');
+        $all_events = $this->CommonAdminmodel->getAllDataWhereLimit('all_events', [], 4);
+        $web_settings = $this->CommonAdminmodel->getWebSetting('web_settings');
+
+        // dd($online_exam);
         
-        return view('home',['posts'=>$posts]);
+        return view('home',[
+                'posts'=>$posts,
+                'banners'=>$banners,
+                'banners_contents'=>$banners_contents,
+                'about_us'=>$about_us,
+                'online_fee_payments'=>$online_fee_payments,
+                'online_results'=>$online_results,
+                'online_exam'=>$online_exam,
+                'home_page_arcive'=>$home_page_arcive,
+                'all_events'=>$all_events,
+                'web_settings'=>$web_settings,
+            ]
+        );
     }
     // Post Detail
     function detail(Request $request,$slug,$postId){

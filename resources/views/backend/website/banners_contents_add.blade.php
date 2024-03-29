@@ -15,8 +15,8 @@
           <!-- DataTables Example -->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fas fa-table"></i> Add Banner
-              <a href="{{url('admin/banners')}}" class="float-right btn btn-sm btn-dark">All Data</a>
+              <i class="fas fa-table"></i> Add Banner Content
+              <a href="{{url('admin/banner-contents')}}" class="float-right btn btn-sm btn-dark">All Data</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -35,19 +35,32 @@
                 <p class="text-success">{{session('success')}}</p>
                 @endif
 
-                <form method="post" action="{{url('admin/banner-add-save')}}" enctype="multipart/form-data">
+                <form method="post" action="{{url('admin/banner-content-add-save')}}" enctype="multipart/form-data">
                   @csrf
                   <table class="table table-bordered">
                       <tr>
-                          <th>Name</th>
-                          <td><input type="text" name="name" class="form-control" /></td>
+                          <th>Position</th>
+                          <td>
+                            <select name="position" required="">
+                                <option value="">Select Option</option>
+                                <option value="left">Left</option>
+                                <option value="right">Right</option>
+                            </select>
+                          </td>
                       </tr>
                       <tr>
                           <th>Image</th>
                           <td>
                             <input type="file" name="image" />
                             <br>
-                            <span>Note: Image width 1200px and height 400px</span>
+                            <span>Note: Image width 300px and height 100px</span>
+                          </td>
+                      </tr>
+                       <tr>
+                          <th>Detail</th>
+                          <td>
+                            <textarea name="contents" rows="5" cols="80"></textarea>
+                            
                           </td>
                       </tr>
                       <tr>

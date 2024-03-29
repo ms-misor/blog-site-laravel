@@ -86,16 +86,18 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-globe"></i>
-            <span>Website</span>
+            <span>Website Home</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="{{url('admin/banners')}}">Banners</a>
             <a class="dropdown-item" href="{{url('admin/banner-contents')}}">Banner Contents</a>
-            <a class="dropdown-item" href="{{url('admin/about-us')}}">About Us</a>
-            <a class="dropdown-item" href="{{url('admin/online-fee-payment')}}">Online Fee Payment</a>
-            <a class="dropdown-item" href="{{url('admin/online-result')}}">Online Result</a>
-            <a class="dropdown-item" href="{{url('admin/online-exam-info')}}">Online Exam Info</a>
-            <a class="dropdown-item" href="{{url('admin/home-page-archives')}}">Archives</a>
+            <a class="dropdown-item" href="{{url('admin/about_us')}}">About Us</a>
+            <a class="dropdown-item" href="{{url('admin/online_fee_payment')}}">Online Fee Payment</a>
+            <a class="dropdown-item" href="{{url('admin/online_result')}}">Online Result</a>
+            <a class="dropdown-item" href="{{url('admin/online_exam')}}">Online Exam Info</a>
+            <a class="dropdown-item" href="{{url('admin/all_events')}}">Events</a>
+            <a class="dropdown-item" href="{{url('admin/home_page_archives')}}">Archives</a>
+            <a class="dropdown-item" href="{{url('admin/web_settings')}}">Web Settings</a>
           </div>
         </li>
         <!-- Comments -->
