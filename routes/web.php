@@ -12,6 +12,7 @@ use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\InformationsController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\CommonAdminController;
+use App\Http\Controllers\TeacherController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -132,6 +133,14 @@ Route::get('admin/home_page_archives/{id}/delete',[CommonAdminController::class,
 
 Route::get('admin/web_settings',[CommonAdminController::class,'webSettings']);
 Route::put('admin/web_settings_save',[CommonAdminController::class,'webSettingsSave']);
+
+// Teachers
+Route::get('admin/teacher_list',[TeacherController::class,'index']);
+Route::get('admin/create-teacher',[TeacherController::class,'create_teacher']);
+Route::post('admin/teacher-add-save',[TeacherController::class,'teacher_add_save']);
+Route::get('admin/teacher/{id}/edit',[TeacherController::class,'teacher_edit']);
+// Route::put('admin/banner-update-save/{id}',[CommonAdminController::class,'banner_update_save']);
+Route::get('admin/teacher/{id}/delete',[TeacherController::class,'teacher_delete']);
 
 Auth::routes();
 
