@@ -90,6 +90,16 @@ class CommonAdmin extends Model
         return $data;
     }
 
+    public function deleteAllData($table_name, $where)
+    {
+        // Use the query builder to retrieve data from the specified table
+        $data = DB::table($table_name)
+                     ->where($where)
+                     ->delete();
+
+        return $data;
+    }
+
     public function getWebSetting($table_name)
     {
         // Use the query builder to retrieve data from the specified table
