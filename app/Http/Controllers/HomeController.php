@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Comment;
+use App\Models\Teacher;
 use App\Models\CommonAdmin;
 class HomeController extends Controller
 {
@@ -138,6 +139,14 @@ class HomeController extends Controller
     function manage_posts(Request $request){
         $posts=Post::where('user_id',$request->user()->id)->orderBy('id','desc')->get();
         return view('manage-posts',['data'=>$posts]);
+    }
+
+    // All teachers
+    function all_teachers(Request $request,$cat_id = null){
+        $teachers=Teacher::orderBy('id','desc')->paginate(5);
+        // dd($teachers);
+        $posts=Post::where('cat_id',$cat_id)->orderBy('id','desc')->paginate(2);
+        return view('teachers.all_teachers',['posts'=>$posts,'teachers'=>$teachers]);
     }
 
 }

@@ -11,7 +11,7 @@ class Teacher extends Model
 {
     use HasFactory;
 
-    protected $table = 'teacher_educations'; // Specify the table name
+    protected $table = 'teachers'; // Specify the table name
 
     
 }

@@ -46,6 +46,8 @@
                             Photo: <input type="file" name="image" />
                             <input type="hidden" value="{{$data->photo}}" name="old_image" />
                             <span><img width="80" height="60" src="{{asset('imgs/teacher_image')}}/{{$data->photo}}" /></span>
+                             <br>
+                            <span>Note: Image width must be 300px and height 300px</span>
                           </td>
                       </tr>
                       <tr>

@@ -13,3 +13,7 @@ yarn-error.log
 package-lock.json
 public/imgs/banner_image
 public/imgs/banner_contents
+
+.png
+.jpg
+.jpeg

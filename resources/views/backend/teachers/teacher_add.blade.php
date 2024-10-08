@@ -44,8 +44,8 @@
                           <td>Nationality: <input type="text" name="nationality" class="form-control" required/></td>
                           <td>
                             Photo: <input type="file" name="image" />
-                            <!-- <br>
-                            <span>Note: Image width 1200px and height 400px</span> -->
+                            <br>
+                            <span>Note: Image width must be 300px and height 300px</span>
                           </td>
                       </tr>
                       <tr>

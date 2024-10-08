@@ -62,9 +62,12 @@
             </tr>
           </tfoot>
           <tbody>
+              @php
+                $i = 1;
+              @endphp
               @foreach($data as $teacher)
               <tr>
-                <td>{{$teacher->id}}</td>
+                <td>{{$i}}</td>
                 <td>{{$teacher->name}}</td>
                 <td>
                   <img src="{{ asset('imgs/teacher_image').'/'.$teacher->photo }}" width="100" />
@@ -78,6 +81,9 @@
                   <a onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm" href="{{url('admin/teacher/'.$teacher->id.'/delete')}}">Delete</a>
                 </td>
               </tr>
+              @php
+                $i++;
+              @endphp
               @endforeach
           </tbody>
         </table>
