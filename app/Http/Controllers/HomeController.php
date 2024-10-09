@@ -149,4 +149,12 @@ class HomeController extends Controller
         return view('teachers.all_teachers',['posts'=>$posts,'teachers'=>$teachers]);
     }
 
+    // getContentForPage
+    function getContentForPage($slug){
+        $data = $this->CommonAdminmodel->getIndividualDataWhere('cms_pages', ['menu' => $slug]);
+        // dd($data);
+
+        return view('pages.content_page',['data'=>$data]);
+    }
+
 }

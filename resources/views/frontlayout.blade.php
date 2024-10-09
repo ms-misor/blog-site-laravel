@@ -89,7 +89,7 @@
 		          About Us
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">At a Glance</a>
+		          <a class="dropdown-item" href="{{url('page/at-a-glance')}}">At a Glance</a>
 		          <a class="dropdown-item" href="#">History</a>
 		          <a class="dropdown-item" href="#">Why Study In rmhsc/shksc</a>
 		          <a class="dropdown-item" href="#">Vision & Mission</a>

@@ -37,9 +37,6 @@ Route::get('save-post-form',[HomeController::class,'save_post_form']);
 Route::post('save-post-form',[HomeController::class,'save_post_data']);
 Route::get('manage-posts',[HomeController::class,'manage_posts']);
 
-// Teachers page
-Route::get('/all-teachers',[HomeController::class,'all_teachers']);
-
 
 // Admin Routes
 Route::get('/admin/login',[AdminController::class,'login']);
@@ -63,9 +60,12 @@ Route::get('/admin/setting',[SettingController::class,'index']);
 Route::post('/admin/setting',[SettingController::class,'save_settings']);
 
 // CMS
-Route::get('admin/about_us',[AboutusController::class,'aboutUsPages']);
-Route::get('admin/about/{id}/delete',[AboutusController::class,'destroy']);
-Route::resource('admin/about',AboutusController::class);
+Route::get('admin/about_us_pages',[AboutusController::class,'aboutUsPages']);
+Route::get('admin/about_us_page/{id}/edit',[AboutusController::class,'contentEdit']);
+Route::put('admin/about_us_page_update/{id}',[AboutusController::class,'contentUpdateSave']);
+
+Route::post('admin/ckeditor_upload', [AboutusController::class, 'upload_ckeditor_data'])->name('admin.ckeditor_upload');
+
 
 Route::get('admin/information_pages',[InformationsController::class,'informationPages']);
 Route::get('admin/information/{id}/delete',[InformationsController::class,'destroy']);
@@ -150,3 +150,9 @@ Route::get('admin/teacher/{id}/delete',[TeacherController::class,'teacher_delete
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
+
+// Teachers page
+Route::get('/all-teachers',[HomeController::class,'all_teachers']);
+
+// getContentForPage
+Route::get('/page/{slug}',[HomeController::class,'getContentForPage']);

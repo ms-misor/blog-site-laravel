@@ -17,16 +17,31 @@
   <div class="card mb-3">
     <div class="card-header">
       <i class="fas fa-table"></i> About Us
-      <a href="{{url('admin/about/create')}}" class="float-right btn btn-sm btn-dark">Add Data</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
+
+        @if($errors)
+          @foreach($errors->all() as $error)
+            <p class="text-danger">{{$error}}</p>
+          @endforeach
+        @endif
+
+        @if(Session::has('error'))
+        <p class="text-danger">{{session('error')}}</p>
+        @endif
+
+        @if(Session::has('success'))
+        <p class="text-success">{{session('success')}}</p>
+        @endif
+        
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
               <th>#</th>
               <th>Title</th>
               <th>Create Date</th>
+              <th>Update Date</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -35,6 +50,7 @@
               <th>#</th>
               <th>Title</th>
               <th>Create Date</th>
+              <th>Update Date</th>
               <th>Action</th>
             </tr>
           </tfoot>
@@ -43,10 +59,10 @@
               <tr>
                 <td>{{$about_content->id}}</td>
                 <td>{{$about_content->page_name}}</td>
-                <td>{{$about_content->create_date}}</td>
+                <td>{{$about_content->created_at}}</td>
+                <td>{{$about_content->updated_at?$about_content->updated_at:'N/A'}}</td>
                 <td>
-                  <a class="btn btn-info btn-sm" href="{{url('admin/about/'.$about_content->id.'/edit')}}">Update</a>
-                  <a onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm" href="{{url('admin/about/'.$about_content->id.'/delete')}}">Delete</a>
+                  <a class="btn btn-info btn-sm" href="{{url('admin/about_us_page/'.$about_content->id.'/edit')}}">Update</a>
                 </td>
               </tr>
               @endforeach
