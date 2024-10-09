@@ -118,4 +118,14 @@ class CommonAdmin extends Model
         return $data;
     }
 
+    public function getIndividualDataWhere($table_name, $where)
+    {
+        // Use the query builder to retrieve data from the specified table
+        $data = DB::table($table_name)
+                     ->where($where)
+                     ->first();
+
+        return $data;
+    }
+
 }

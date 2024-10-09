@@ -66,7 +66,7 @@
             <span>CMS</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="{{url('admin/about_us')}}">About Us</a>
+            <a class="dropdown-item" href="{{url('admin/about_us_pages')}}">About Us</a>
             <a class="dropdown-item" href="{{url('admin/information_pages')}}">Information</a>
             <a class="dropdown-item" href="{{url('admin/event_pages')}}">Events</a>
           </div>
@@ -185,6 +185,10 @@
     <script src="{{asset('backend')}}/js/demo/chart-area-demo.js"></script>
 
     <script src="{{asset('backend')}}/js/teacher.js"></script>
+
+    <!-- CKEDITOR -->
+    <script src="{{asset('backend')}}/js/ckeditor/ckeditor.js"></script>
+    <script src="{{asset('backend')}}/js/cms_content.js"></script>
 
   </body>
 
