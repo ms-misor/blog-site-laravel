@@ -32,16 +32,20 @@ class AboutusController extends Controller
      * @param  \App\Models\Aboutus  $aboutus
      * @return \Illuminate\Http\Response
      */
-    public function aboutUsPages()
+    public function aboutUsPages($slug)
     {
-        $data = $this->CommonAdminmodel->getAllDataWhere('cms_pages', ['parent_menu' => 'about_us']);
+        $data = $this->CommonAdminmodel->getAllDataWhere('cms_pages', ['parent_menu' => $slug]);
 
         // dd($data);
 
-        return view('backend.about_us.all_pages',[
+        $string = str_replace('_', ' ', $slug);
+        $parent_menu_show = ucwords($string);
+
+        return view('backend.cms.all_pages',[
             'data'=>$data,
-            'title'=>'All About Us',
-            'meta_desc'=>'This is meta description for all about pages'
+            'title'=>$parent_menu_show,
+            'parent_menu'=>$parent_menu_show,
+            'meta_desc'=>'This is meta description for '.$parent_menu_show.' pages'
         ]);
     }
 
@@ -123,9 +127,10 @@ class AboutusController extends Controller
 
         // dd($res);
         
-        return view('backend.about_us.content_update',[
+        return view('backend.cms.content_update',[
             'data'=>$res,
             'title'=>$res->page_name,
+            'parent_menu'=>$res->parent_menu,
             'meta_desc'=>'This is meta description for About Us Content'
         ]);
     }
@@ -149,9 +154,11 @@ class AboutusController extends Controller
         $res = $this->CommonAdminmodel->updatetData($data, $id, 'cms_pages');
 
         if($res){
-            return redirect('admin/about_us_pages')->with('success','Content has been updated');
+
+            $res_cms_page = $this->CommonAdminmodel->getDatabyId($id, 'cms_pages');
+            return redirect('admin/cms_pages/'.$res_cms_page->parent_menu)->with('success','Content has been updated');
         }else{
-            return redirect('admin/about_us_page/'.$id.'/edit')->with('error','Something wrong, please try again !');
+            return redirect('admin/cms_pages/'.$id.'/edit')->with('error','Something wrong, please try again !');
         }
         
     } 

@@ -66,9 +66,12 @@
             <span>CMS</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="{{url('admin/about_us_pages')}}">About Us</a>
-            <a class="dropdown-item" href="{{url('admin/information_pages')}}">Information</a>
-            <a class="dropdown-item" href="{{url('admin/event_pages')}}">Events</a>
+            <a class="dropdown-item" href="{{url('admin/cms_pages/about_us')}}">About Us</a>
+            <a class="dropdown-item" href="{{url('admin/cms_pages/academic')}}">Academic</a>
+            <a class="dropdown-item" href="{{url('admin/cms_pages/admission')}}">Admission</a>
+            <a class="dropdown-item" href="{{url('admin/cms_pages/rules_regulation')}}">Rules Regulation</a>
+            <!-- <a class="dropdown-item" href="{{url('admin/information_pages')}}">Information</a>
+            <a class="dropdown-item" href="{{url('admin/event_pages')}}">Events</a> -->
           </div>
         </li>
         <!-- Post -->
