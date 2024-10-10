@@ -90,17 +90,17 @@
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		          <a class="dropdown-item" href="{{url('page/at-a-glance')}}">At a Glance</a>
-		          <a class="dropdown-item" href="#">History</a>
-		          <a class="dropdown-item" href="#">Why Study In rmhsc/shksc</a>
-		          <a class="dropdown-item" href="#">Vision & Mission</a>
-		          <a class="dropdown-item" href="#">Chairman Message</a>
-		          <a class="dropdown-item" href="#">Head Master/ Principal  Message</a>
-		          <a class="dropdown-item" href="#">Governing body</a>
-		          <a class="dropdown-item" href="#">Organogram</a>
-		          <a class="dropdown-item" href="#">Our Location</a>
-		          <a class="dropdown-item" href="#">Future Plan</a>
-		          <a class="dropdown-item" href="#">The Beautiful Campus</a>
-		          <a class="dropdown-item" href="#">Infrastructure</a>
+		          <a class="dropdown-item" href="{{url('page/history')}}">History</a>
+		          <a class="dropdown-item" href="{{url('page/study-in-rmhsc-shksc')}}">Why Study In rmhsc/shksc</a>
+		          <a class="dropdown-item" href="{{url('page/vision-and-mission')}}">Vision & Mission</a>
+		          <a class="dropdown-item" href="{{url('page/chairman-message')}}">Chairman Message</a>
+		          <a class="dropdown-item" href="{{url('page/head-master-principal-message')}}">Head Master/ Principal  Message</a>
+		          <a class="dropdown-item" href="{{url('page/governing-body')}}">Governing body</a>
+		          <a class="dropdown-item" href="{{url('page/organogram')}}">Organogram</a>
+		          <a class="dropdown-item" href="{{url('page/our-location')}}">Our Location</a>
+		          <a class="dropdown-item" href="{{url('page/future-plan')}}">Future Plan</a>
+		          <a class="dropdown-item" href="{{url('page/beautiful-campus')}}">The Beautiful Campus</a>
+		          <a class="dropdown-item" href="{{url('page/infrastructure')}}">Infrastructure</a>
 		        </div>
 		      </li>
 
@@ -109,13 +109,13 @@
 		          Academic
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Others Publication</a>
-		          <a class="dropdown-item" href="#">Curriculum</a>
-		          <a class="dropdown-item" href="#">Academic Calendar</a>
-		          <a class="dropdown-item" href="#">Scholarship</a>
-		          <a class="dropdown-item" href="#">Public Exam Result</a>
-		          <a class="dropdown-item" href="#">Digital Contents</a>
-		          <a class="dropdown-item" href="#">List Of Holidays</a>
+		          <a class="dropdown-item" href="{{url('page/others-publication')}}">Others Publication</a>
+		          <a class="dropdown-item" href="{{url('page/curriculum')}}">Curriculum</a>
+		          <a class="dropdown-item" href="{{url('page/academic-calendar')}}">Academic Calendar</a>
+		          <a class="dropdown-item" href="{{url('page/scholarship')}}">Scholarship</a>
+		          <a class="dropdown-item" href="{{url('page/public-exam-result')}}">Public Exam Result</a>
+		          <a class="dropdown-item" href="{{url('page/digital-contents')}}">Digital Contents</a>
+		          <a class="dropdown-item" href="{{url('page/list-of-holidays')}}">List Of Holidays</a>
 		        </div>
 		      </li>
 
@@ -124,18 +124,18 @@
 		          Admission
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Admission Notice</a>
-		          <a class="dropdown-item" href="#">Guidelines</a>
-		          <a class="dropdown-item" href="#">Admission Form</a>
-		          <a class="dropdown-item" href="#">Admission Result</a>
-		          <a class="dropdown-item" href="#">Apply Now</a>
-		          <a class="dropdown-item" href="#">Admission Contents</a>
-		          <a class="dropdown-item" href="#">Fast Facts</a>
-		          <a class="dropdown-item" href="#">Fee & Payment</a>
-		          <a class="dropdown-item" href="#">Scholarships</a>
-		          <a class="dropdown-item" href="#">Transfer Procedures</a>
-		          <a class="dropdown-item" href="#">Study at BMSC/SHKSC</a>
-		          <a class="dropdown-item" href="#">Admission Circula</a>
+		          <a class="dropdown-item" href="{{url('page/admission-notice')}}">Admission Notice</a>
+		          <a class="dropdown-item" href="{{url('page/guidelines')}}">Guidelines</a>
+		          <a class="dropdown-item" href="{{url('page/admission-form')}}">Admission Form</a>
+		          <a class="dropdown-item" href="{{url('page/admission-result')}}">Admission Result</a>
+		          <a class="dropdown-item" href="{{url('page/apply-now')}}">Apply Now</a>
+		          <a class="dropdown-item" href="{{url('page/admission-contents')}}">Admission Contents</a>
+		          <a class="dropdown-item" href="{{url('page/fast-facts')}}">Fast Facts</a>
+		          <a class="dropdown-item" href="{{url('page/fee-payment')}}">Fee & Payment</a>
+		          <a class="dropdown-item" href="{{url('page/scholarships')}}">Scholarships</a>
+		          <a class="dropdown-item" href="{{url('page/transfer-procedures')}}">Transfer Procedures</a>
+		          <a class="dropdown-item" href="{{url('page/study-bmsc-shksc')}}">Study at BMSC/SHKSC</a>
+		          <a class="dropdown-item" href="{{url('page/admission-circular')}}">Admission Circular</a>
 		        </div>
 		      </li>
 
@@ -144,14 +144,14 @@
 		          Rules Regulation
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Instruction for Parents</a>
-		          <a class="dropdown-item" href="#">Instruction for Students</a>
-		          <a class="dropdown-item" href="#">Free & Expenditure</a>
-		          <a class="dropdown-item" href="#">Free Payment Procedure</a>
-		          <a class="dropdown-item" href="#">Uniform</a>
-		          <a class="dropdown-item" href="#">Result</a>
-		          <a class="dropdown-item" href="#">House</a>
-		          <a class="dropdown-item" href="#">Discipline </a>
+		          <a class="dropdown-item" href="{{url('page/instruction-for-parents')}}">Instruction for Parents</a>
+		          <a class="dropdown-item" href="{{url('page/instruction-for-students')}}">Instruction for Students</a>
+		          <a class="dropdown-item" href="{{url('page/fee-and-expenditure')}}">Fee & Expenditure</a>
+		          <a class="dropdown-item" href="{{url('page/fee-payment-procedure')}}">Fee Payment Procedure</a>
+		          <a class="dropdown-item" href="{{url('page/uniform')}}">Uniform</a>
+		          <a class="dropdown-item" href="{{url('page/result')}}">Result</a>
+		          <a class="dropdown-item" href="{{url('page/house')}}">House</a>
+		          <a class="dropdown-item" href="{{url('page/discipline')}}">Discipline </a>
 		        </div>
 		      </li>
 

@@ -16,7 +16,8 @@
   <!-- DataTables Example -->
   <div class="card mb-3">
     <div class="card-header">
-      <i class="fas fa-table"></i> About Us
+      <i class="fas fa-table"></i>
+      {{$parent_menu}}
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -55,16 +56,22 @@
             </tr>
           </tfoot>
           <tbody>
-              @foreach($data as $about_content)
+              @php
+                $ix = 1;
+              @endphp
+              @foreach($data as $content)
               <tr>
-                <td>{{$about_content->id}}</td>
-                <td>{{$about_content->page_name}}</td>
-                <td>{{$about_content->created_at}}</td>
-                <td>{{$about_content->updated_at?$about_content->updated_at:'N/A'}}</td>
+                <td>{{$ix}}</td>
+                <td>{{$content->page_name}}</td>
+                <td>{{$content->created_at}}</td>
+                <td>{{$content->updated_at?$content->updated_at:'N/A'}}</td>
                 <td>
-                  <a class="btn btn-info btn-sm" href="{{url('admin/about_us_page/'.$about_content->id.'/edit')}}">Update</a>
+                  <a class="btn btn-info btn-sm" href="{{url('admin/cms_page/'.$content->id.'/edit')}}">Update</a>
                 </td>
               </tr>
+              @php
+                $ix++;
+              @endphp
               @endforeach
           </tbody>
         </table>

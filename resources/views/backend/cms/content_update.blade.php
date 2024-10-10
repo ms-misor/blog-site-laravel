@@ -18,7 +18,7 @@
   <div class="card mb-3">
     <div class="card-header">
       <i class="fas fa-table"></i> {{$title}}
-      <a href="{{url('admin/about_us_pages')}}" class="float-right btn btn-sm btn-dark">All Data</a>
+      <a href="{{url('admin/cms_pages/' . $parent_menu)}}" class="float-right btn btn-sm btn-dark">All Data</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -37,7 +37,7 @@
         <p class="text-success">{{session('success')}}</p>
         @endif
 
-        <form method="post" action="{{url('admin/about_us_page_update/'.$data->id)}}" enctype="multipart/form-data">
+        <form method="post" action="{{url('admin/cms_page_update/'.$data->id)}}" enctype="multipart/form-data">
           @csrf
           @method('put')
           <table class="table table-bordered">

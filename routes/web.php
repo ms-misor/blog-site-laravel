@@ -60,9 +60,9 @@ Route::get('/admin/setting',[SettingController::class,'index']);
 Route::post('/admin/setting',[SettingController::class,'save_settings']);
 
 // CMS
-Route::get('admin/about_us_pages',[AboutusController::class,'aboutUsPages']);
-Route::get('admin/about_us_page/{id}/edit',[AboutusController::class,'contentEdit']);
-Route::put('admin/about_us_page_update/{id}',[AboutusController::class,'contentUpdateSave']);
+Route::get('admin/cms_pages/{id}',[AboutusController::class,'aboutUsPages']);
+Route::get('admin/cms_page/{id}/edit',[AboutusController::class,'contentEdit']);
+Route::put('admin/cms_page_update/{id}',[AboutusController::class,'contentUpdateSave']);
 
 Route::post('admin/ckeditor_upload', [AboutusController::class, 'upload_ckeditor_data'])->name('admin.ckeditor_upload');
 
