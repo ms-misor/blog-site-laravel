@@ -1,5 +1,5 @@
 @extends('frontlayout')
-@section('title','All Categories')
+@section('title','All Teachers')
 @section('content')
 		<div class="row">
 
@@ -19,11 +19,15 @@
 							    	</span>
 							    </a></h5>
 							    <h5 class="card-title" class="text-truncate"><a href="#">
-							    	<span class="content-label">Nationality:</span> 
-							    	<span class="content-title">{{$teacher->nationality}}</span>
+							    	<span class="content-label">Designation :</span> 
+							    	<span class="content-title">{{$teacher->present_post}}</span>
 							    </a></h5>
 							    <h5 class="card-title" class="text-truncate"><a href="#">
-							    	<span class="content-label">Mobile:</span>  
+							    	<span class="content-label">Subject :</span> 
+							    	<span class="content-title">{{$teacher->subject_teacher}}</span>
+							    </a></h5>
+							    <h5 class="card-title" class="text-truncate"><a href="#">
+							    	<span class="content-label">Mobile No:</span>  
 							    	<span class="content-title">{{$teacher->mobile_number}}</span>
 							    </a>
 								</h5>
@@ -94,7 +98,7 @@
 				color: #fff !important;
 			}
 			.card-body a{
-				font-size: 14px;
+				font-size: 13px;
 				color: #666 !important;
 			}
 
