@@ -3,6 +3,21 @@
 @section('content')
 		<div class="row">
 			<div class="col-md-8">
+
+				<div class="row mb-5"> 
+					@php
+
+					if($data->attachment_path != ""){
+					  @endphp
+						<div class="col-12 d-flex justify-content-center">
+							<a target="_blank" href="{{ asset('attachments/files').'/'.$data->attachment_path }}" class="btn btn-info"  style="width: 80%;"><span>{{$data->attachment_title?$data->attachment_title:'Attachment'}}</span></a>
+						</div>
+					  @php
+					}
+
+					@endphp
+				</div>
+
 				<div class="row mb-5"> 
 					{!! $data->details !!}
 				</div>

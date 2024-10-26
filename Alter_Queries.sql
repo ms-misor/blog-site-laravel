@@ -28,3 +28,10 @@ CREATE TABLE `teacher_educations` ( `id` INT NOT NULL AUTO_INCREMENT , `teacher_
 CREATE TABLE `cms_pages` ( `id` INT NOT NULL AUTO_INCREMENT , `parent_menu` VARCHAR(200) NOT NULL , `menu` VARCHAR(200) NOT NULL , `details` LONGTEXT NULL DEFAULT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` DATETIME NULL DEFAULT NULL , `action_by` INT(11) NULL DEFAULT NULL COMMENT 'who create/update' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 ALTER TABLE `cms_pages` ADD `page_name` VARCHAR(200) NOT NULL AFTER `id`;
 ALTER TABLE `cms_pages` ADD UNIQUE(`menu`);
+
+
+-- Till above , uoloaded to Cpaenl done --
+
+-- 27-10-2024 --
+
+ALTER TABLE `cms_pages` ADD `attachment_title` VARCHAR(200) NULL DEFAULT NULL COMMENT 'pdf' AFTER `details`, ADD `attachment_path` TEXT NULL DEFAULT NULL COMMENT 'pdf' AFTER `attachment_title`;

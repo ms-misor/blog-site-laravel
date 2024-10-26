@@ -47,6 +47,31 @@
                     <input type="text" class="form-control" name="title" placeholder="Title" value="{{$title}}" readonly />
                   </td>
               </tr>
+
+              <tr>
+                  <th>Attachemnt Title</th>
+                  <td>
+                    <input type="text" class="form-control" name="attachment_title" placeholder="Attachemnt Title" value="{{$data->attachment_title}}" />
+                  </td>
+              </tr>
+
+
+              <tr>
+                  <th>Attachment(Only PDF)</th>
+                  <td>
+                    <input type="file" class="form-control" name="attachment" />
+                    
+                      @php
+                        if($data->attachment_path != ""){
+                          @endphp
+                            <a target="_blank" href="{{ asset('attachments/files').'/'.$data->attachment_path }}"><span class="btn btn-info">Existing Attachment</span></a>
+                          @php
+                        }
+                      @endphp
+                    
+                  </td>
+              </tr>
+
               <tr>
                   <th>Detail</th>
                   <td>
