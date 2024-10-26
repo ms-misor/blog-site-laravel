@@ -137,6 +137,9 @@ class AboutusController extends Controller
 
     // Update Data
     function contentUpdateSave(Request $request, $id){
+
+        $res_cms_page = $this->CommonAdminmodel->getDatabyId($id, 'cms_pages');
+
         $request->validate([
             'title'=>'required',
             'contents'=>'required',
@@ -149,13 +152,22 @@ class AboutusController extends Controller
         $data['updated_at'] = date('Y-m-d h:i:s');
         $data['action_by']  = $adminSessionData['id'];
 
+        $path = $res_cms_page->attachment_path;
+        if ($request->hasFile('attachment')) {
+            $attachment_file=$request->file('attachment');
+            $attachmentFile = $path = time().'.'.$attachment_file->getClientOriginalExtension();
+            $dest1=public_path('/attachments/files');
+            $attachment_file->move($dest1,$attachmentFile);
+        }
+        $data['attachment_title']   = $request->attachment_title?$request->attachment_title:$res_cms_page->attachment_title;
+        $data['attachment_path']    = $path;
+
         // dd($data);
 
         $res = $this->CommonAdminmodel->updatetData($data, $id, 'cms_pages');
 
         if($res){
 
-            $res_cms_page = $this->CommonAdminmodel->getDatabyId($id, 'cms_pages');
             return redirect('admin/cms_pages/'.$res_cms_page->parent_menu)->with('success','Content has been updated');
         }else{
             return redirect('admin/cms_pages/'.$id.'/edit')->with('error','Something wrong, please try again !');
